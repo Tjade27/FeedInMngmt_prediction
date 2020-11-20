@@ -21,25 +21,25 @@ The result of this project is a deep learning model that predicts lost power for
 
 ## Repo Organisation
 
-- [FeedInMngmt_presentation.pdf](FeedInMngmt_LSTM.ipynb): Presentation of the project including additional explenation about the feed-in managment sitatuion. 
-- [FeedInMngmt_EDA.ipynb](FeedInMngmt_EDA.ipynb): Loading and pre-processing feed-in managment data as well as weather data, price data and energy consumption data. Followed by an exploration of the given Data as well as an investigation of correlating behaivoir of various time series (e.g., the influence of wind on feed in management events). This document ends with a ranking and selection of features by their importance.  
-- [FeedInMngmt_ML.ipynb](FeedInMngmt_ML.ipynb): Creation and elaboration of train-validation-test split as well as design of two Naïve base-line models: the shift model (e.g., the next timestep equals the last time step ) and an  Exponential Smoothing model (e.g., next timestep equals the moving average over the last X hours). In addition, functions to evaluate the the results are described in this document.  
-- [FeedInMngmt_Prophet.ipynb](FeedInMngmt_Prophet.ipynb): Implementation, tuning and evaluation of a FB Prophet Model for for prediction of one timestep and multiple timesteps into the future. 
-- [FeedInMngmt_LSTM.ipynb](FeedInMngmt_LSTM.ipynb): Implementation, tuning and evaluation of a Long-Short-Term-Memory Recurrent Neural Network for prediction of one timestep and multiple timesteps into the future. 
+- [FeedInMngmt_presentation.pdf](FeedInMngmt_presentation.pdf): Presentation of the project including additional explanation about the feed-in managment situation. 
+- [FeedInMngmt_EDA.ipynb](FeedInMngmt_EDA.ipynb): Loading and pre-processing feed-in managment data as well as weather data, price data and energy consumption data. Followed by an exploration of the given data as well as an investigation of correlation behavior of various time series (e.g., the influence of wind on feed in management events). This document ends with a ranking and selection of features by their importance.  
+- [FeedInMngmt_Base_Models.ipynb](FeedInMngmt_Base_Models.ipynb): Creation and elaboration of train-validation-test split as well as design of two Naive baseline models: the shift model (e.g., the next timestep equals the last time step ) and an  Exponential Smoothing model (e.g., next timestep equals the moving average over the last X hours). In addition, functions to evaluate the test results are described in this document.  
+- [FeedInMngmt_Prophet.ipynb](FeedInMngmt_Prophet.ipynb): Implementation, tuning and evaluation of a FB Prophet Model for prediction of one timestep and multiple timesteps into the future. 
+- [FeedInMngmt_LSTM_NN.ipynb](FeedInMngmt_LSTM_NN.ipynb): Implementation, tuning and evaluation of a Long-Short-Term-Memory Recurrent Neural Network for prediction of one timestep and multiple timesteps into the future. 
 
 
 
 
 ## Data Overview
 
-The aim of this Data Science projekt is a to predict Feed-In Managment events and the energy loss connected to these events. After cleaning, all data is available and consitent for the follwoing timespan:  `2018-01-01 06:00:00` until `2019-04-30 06:00:00`. 
-The  target data (`target_losses_norm`) for this timespan looks as followed. 
+The aim of this Data Science project is to predict Feed-In Managment events and the energy loss connected to these events. After cleaning, all data is available and consistent for the follwoing timespan:  `2018-01-01 06:00:00` until `2019-04-30 06:00:00`. 
+The  target data (`target_losses_norm`) for this timespan looks as seen below. 
 
 <img src="./figures/overview_target.png" style="zoom:80%;" />
 
-In addition to the target data (endogenous variable), various exogenous features are given. Meteorological parameters are obtained from a  numerical weather model (GFS data, e.g., `t_100m_k` as temperuter at 100m above ground). Furthermore, predictions are based on price data (e.g., `energyprice_euro_MWh`), energy consumption data (`NetConsumption_MW`) and engineered features (such as `working_day`). 
+In addition to the target data (endogenous variable), various exogenous features are given. Meteorological parameters are obtained from a  numerical weather model (GFS data, e.g., `t_100m_k` as temperature at 100m above sea level). Furthermore, predictions are based on price data (e.g., `energyprice_euro_MWh`), energy consumption data (`NetConsumption_MW`) and engineered features (such as `working_day`).
 
-In the  following graphs various exogenous features are shown in their variation over time. 
+In the following graphs various exogenous features are shown in their variation over time. 
 
 ![data_overview1](./figures/data_overview1.png)
 
