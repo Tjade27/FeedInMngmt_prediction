@@ -66,7 +66,7 @@ The developed model can potentially be used as part of a Demand Side Managment s
 
 ## Outcome
 
-The performances of the investigated prediction models are measured using the Root Mean Squared Percentage Error.
+The performances of the investigated prediction models are measured using the Mean Absolute Percentage Error.
 
 
 ## Future Work
