@@ -66,8 +66,13 @@ The developed model can potentially be used as part of a Demand Side Managment s
 
 ## Outcome
 
-The performances of the investigated prediction models are measured using the Mean Absolute Percentage Error.
+The performances of the investigated prediction models are measured using the Mean Absolute Percentage Error (MAPE).
+
+![results_MAPE_test](./figures/results_MAPE_test.png)
 
 
 ## Future Work
 
+**APIs for live predictions:** For live predictions of Feed-In Management loss, GFS Data, Feed-In  Management Data as well as Price and Consumption data need to be received via an application programming interface (API).  Services to consider include [eex Market API](https://www.eex.com/en/market-data/eex-group-datasource/api), [SMARD Strommarktdaten](https://www.smard.de/en/downloadcenter/download-market-data), [OpenWeather API](https://openweathermap.org/api), [climacell Weather Data](https://www.climacell.co/). 
+
+**Interpolation of inconsistent / artificial data April/Mai 2019:** In the Exploratory Data Analysis, inconsistent / artificial data was observered for parts of April/Mai 2019. In the current approach, the data was cut off at `2019-04-30 06:00:00` to avoide the model  being trained on artificial data. An interpolation of the data gap could  be done using a Standard Week or even a SARIMA model for the seasonal data (e.g., azimuth and elevation).
