@@ -62,7 +62,7 @@ source_test = get_test_dataset(df_test, model, dataset)
 
 
 # changeable attributes
-plot = figure(x_axis_type="datetime", plot_width=1200, tools=["box_zoom", "reset"], toolbar_location="right")
+plot = figure(x_axis_type="datetime", plot_width=1200, tools=["box_zoom" ,"reset"], toolbar_location="right")
 plot.title.text = title
 line_pred = plot.line(x="date", y=step, source = source_pred, line_color = "blue", legend_label="Predictions")
 line_actual = plot.line(x="date", y=step, source = source_test, line_color = "red", legend_label="Actual Values")
@@ -72,7 +72,7 @@ plot.xaxis.axis_label = "Time"
 plot.yaxis.axis_label = "Power Loss (normed)"
 plot.axis.axis_label_text_font_style = "bold"
 plot.x_range = DataRange1d(range_padding=0.0)
-plot.grid.grid_line_alpha = 0.3
+plot.grid.grid_line_alpha = 0.5
 
 model_select.on_change('value', update_plot)
 dataset_select.on_change('value', update_plot)

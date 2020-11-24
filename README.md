@@ -27,10 +27,10 @@ The result of this project is a deep learning model that predicts lost power for
 - [FeedInMngmt_EDA.ipynb](FeedInMngmt_EDA.ipynb): Loading and pre-processing feed-in managment data as well as weather data, price data and energy consumption data. Followed by an exploration of the given data as well as an investigation of correlating behavior of various time series (e.g., the influence of wind on feed in management events). This document ends with a ranking and selection of features by their importance.  
 - [FeedInMngmt_Base_Models.ipynb](FeedInMngmt_Base_Models.ipynb): Creation and elaboration of train-validation-test split as well as design of two naive baseline models: the Shift model (e.g., the next timestep equals the last time step) and an  Exponential Smoothing model (e.g., next timestep equals the moving average over the last X hours). In addition, functions to evaluate the test results are described in this document.  
 - [FeedInMngmt_Prophet.ipynb](FeedInMngmt_Prophet.ipynb): Implementation and evaluation of a FB Prophet Model for the prediction of one timestep and multiple timesteps into the future. 
-- [FeedInMngmt_LSTM_NN.ipynb](FeedInMngmt_LSTM_NN.ipynb): Implementation and evaluation of a Long-Short-Term-Memory Recurrent Neural Network for the prediction of one timestep and multiple timesteps into the future.
+- [FeedInMngmt_LSTM_NN.ipynb](FeedInMngmt_LSTM_NN.ipynb): Implementation and evaluation of a Long-Short-Term-Memory Recurrent Neural Network for the prediction of one timestep and multiple timesteps into the future. 
 - [FeedInMngmt_LSTM_NN_PeepHole.ipynb](FeedInMngmt_LSTM_NN_PeepHole.ipynb): Implementation and evaluation of a Long-Short-Term-Memory Recurrent Neural Network with peephole connections for the prediction of one timestep and multiple timesteps into the future. 
-- [FeedInMngmt_Results.ipynb](FeedInMngmt_Results.ipynb): Evaluation of the different models based on the chosen test metrics.
-- [FeedInMngmt_Results_Visualization.ipynb](FeedInMngmt_Results_Visualization.ipynb): Interactive plot to assess the predictions of the differen models against the actual values.
+- [FeedInMngmt_Results.ipynb](FeedInMngmt_Results.ipynb): Evaluation of the different models based on the chosen test metrics and application on an example use case.
+- [FeedInMngmt_Results_Visualization.ipynb](FeedInMngmt_Results_Visualization.ipynb): Interactive Visualization of the predictions and actual values for every model.
 
 
 
